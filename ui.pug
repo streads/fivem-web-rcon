@@ -1,0 +1,37 @@
+html
+
+  head
+    link(rel="stylesheet" type="text/css" href="https://bootswatch.com/cosmo/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+  body
+    nav.navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') SheepRcon(FiveM)
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+
+          form.navbar-form.navbar-right(role='search')
+            .form-group
+              input#endpoint.form-control(type='text', placeholder='IP:port')            
+              a &nbsp;              
+              input#password.form-control(type='password', placeholder='rcon password')
+              a &nbsp;
+              input#connectbtn.btn.btn-success(type='button', value="Connect")      
+              a#tunnel(style="display:none") #{tunnel}                  
+    div#log(style="position:fixed; width:100%; top: 55px; height:calc(100% - 95px); overflow-y: auto;" )
+ 
+      
+    input#commandInput(type="text", placeholder="Command" style="line-height:40px; position: fixed; bottom: 0; width:100%")
+  style
+    include style.css
+  script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js")  
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js")
+  script  
+    include script.js
