@@ -79,8 +79,19 @@ function log(text){
     $("#log").append("<div class='logRow'><a style='color: rgb(41, 128, 185); text-decoration:none;'>["+
       ("0" + time.getHours()).slice(-2)   + ":" +
       ("0" + time.getMinutes()).slice(-2) + ":" +
-      ("0" + time.getSeconds()).slice(-2) + 
+      ("0" + time.getSeconds()).slice(-2) +
       "] </a><a style='color: black;text-decoration:none;'>" + text + "</a></div>")
     $("#log").animate({ scrollTop: $(document).height() }, "fast");
 
 }
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-89571438-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
